@@ -1,0 +1,458 @@
+{
+  "nodes": [
+    {
+      "id": "customer_felix",
+      "label": "Customer",
+      "properties": {
+        "name": "Felix",
+        "customerId": "felix_001"
+      }
+    },
+    {
+      "id": "customer_henry_leong",
+      "label": "Customer",
+      "properties": {
+        "name": "Henry Leong",
+        "customerId": "henry_leong_001",
+        "companyId": "wintech"
+      }
+    },
+    {
+      "id": "customer_ye_ko",
+      "label": "Customer",
+      "properties": {
+        "name": "Ye Ko",
+        "customerId": "ye_ko_001",
+        "companyId": "wintech"
+      }
+    },
+    {
+      "id": "customer_khai_siong",
+      "label": "Customer",
+      "properties": {
+        "name": "Khai Siong",
+        "customerId": "khai_siong_001",
+        "companyId": "wintech"
+      }
+    },
+    {
+      "id": "company_wintech",
+      "label": "Company",
+      "properties": {
+        "name": "Wintech",
+        "industry": "Materials Analysis Services"
+      }
+    },
+    {
+      "id": "fa_case_wafer_delamination",
+      "label": "FailureAnalysisCase",
+      "properties": {
+        "caseId": "wafer_delamination_001",
+        "summary": "Analysis of wafer delamination between epoxy and glass layers with focus on cross-sectional imaging and epoxy pore structure investigation",
+        "status": "Open",
+        "productInvolved": "Wafer with epoxy-glass interface"
+      }
+    },
+    {
+      "id": "material_epoxy",
+      "label": "Material",
+      "properties": {
+        "name": "Epoxy",
+        "materialType": "Polymer",
+        "failureModesObserved": ["Delamination", "Weak adhesion"]
+      }
+    },
+    {
+      "id": "material_glass",
+      "label": "Material",
+      "properties": {
+        "name": "Glass",
+        "materialType": "Ceramic"
+      }
+    },
+    {
+      "id": "material_wafer",
+      "label": "Material",
+      "properties": {
+        "name": "Wafer",
+        "materialType": "Composite Structure"
+      }
+    },
+    {
+      "id": "technique_sem",
+      "label": "AnalysisTechnique",
+      "properties": {
+        "name": "Scanning Electron Microscopy",
+        "abbreviation": "SEM",
+        "description": "High-resolution imaging technique for surface and cross-sectional analysis",
+        "category": "Microscopy"
+      }
+    },
+    {
+      "id": "technique_3d_sem",
+      "label": "AnalysisTechnique",
+      "properties": {
+        "name": "3D Scanning Electron Microscopy",
+        "abbreviation": "3D SEM",
+        "description": "Three-dimensional SEM imaging for volumetric structure analysis",
+        "category": "Microscopy"
+      }
+    },
+    {
+      "id": "technique_hf_liftoff",
+      "label": "AnalysisTechnique",
+      "properties": {
+        "name": "HF Liftoff",
+        "abbreviation": "HF Liftoff",
+        "description": "Chemical method to remove polymer layers using hydrofluoric acid",
+        "category": "Chemical Analysis"
+      }
+    },
+    {
+      "id": "prep_cross_sectioning",
+      "label": "SamplePreparationMethod",
+      "properties": {
+        "name": "Cross-sectioning",
+        "description": "Cutting samples to expose internal structures for analysis"
+      }
+    },
+    {
+      "id": "prep_underside_inspection",
+      "label": "SamplePreparationMethod",
+      "properties": {
+        "name": "Underside Inspection",
+        "description": "Method involving careful peeling of delaminated sections to inspect the underside surface"
+      }
+    },
+    {
+      "id": "learning_delamination_challenges",
+      "label": "LearningPoint",
+      "properties": {
+        "description": "Delamination during wafer cutting presents significant challenges due to weak adhesion between epoxy and glass, requiring modified analysis approaches",
+        "category": "Analysis Insight",
+        "keywords": ["delamination", "weak adhesion", "epoxy-glass interface", "sample preparation challenges"]
+      }
+    },
+    {
+      "id": "learning_sem_method_adaptation",
+      "label": "LearningPoint",
+      "properties": {
+        "description": "SEM inspection methods need to be adapted when dealing with delamination artifacts - underside inspection of delaminated sections can provide better results than traditional cross-sectional imaging",
+        "category": "Analysis Insight",
+        "keywords": ["SEM adaptation", "delamination artifacts", "underside inspection", "method modification"]
+      }
+    },
+    {
+      "id": "learning_3d_limitations",
+      "label": "LearningPoint",
+      "properties": {
+        "description": "3D SEM imaging may not be achievable for certain sample types, particularly when dealing with flat surfaces like the underside of delaminated epoxy",
+        "category": "Analysis Insight",
+        "keywords": ["3D SEM limitations", "flat surfaces", "technique feasibility"]
+      }
+    },
+    {
+      "id": "learning_iterative_collaboration",
+      "label": "LearningPoint",
+      "properties": {
+        "description": "Technical analysis requires iterative communication between requestor and analysis team to explore alternative methods and clarify requirements for optimal results",
+        "category": "Analysis Insight",
+        "keywords": ["collaboration", "iterative process", "method exploration", "requirement clarification"]
+      }
+    },
+    {
+      "id": "challenge_delamination_artifacts",
+      "label": "Challenge",
+      "properties": {
+        "description": "Delamination artifacts interfere with traditional cross-sectional SEM imaging, requiring alternative inspection approaches",
+        "context": "Wafer analysis with epoxy-glass interface",
+        "status": "Resolved"
+      }
+    },
+    {
+      "id": "challenge_3d_visualization",
+      "label": "Challenge",
+      "properties": {
+        "description": "Achieving 3D visualization of epoxy pore structure is difficult due to the flat nature of delaminated surfaces",
+        "context": "3D SEM request for epoxy pore analysis",
+        "status": "Identified"
+      }
+    },
+    {
+      "id": "doc_wafer_analysis_email_thread",
+      "label": "DocumentReference",
+      "properties": {
+        "sourceNoteId": "wafer_analysis_email_thread_001",
+        "title": "Wafer Analysis Email Thread - Delamination Investigation",
+        "processedDate": "2025-06-04T00:00:00+08:00"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source": "customer_henry_leong",
+      "target": "company_wintech",
+      "type": "WORKS_FOR"
+    },
+    {
+      "source": "customer_ye_ko",
+      "target": "company_wintech",
+      "type": "WORKS_FOR"
+    },
+    {
+      "source": "customer_khai_siong",
+      "target": "company_wintech",
+      "type": "WORKS_FOR"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "customer_felix",
+      "type": "ASSOCIATED_CUSTOMER"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "company_wintech",
+      "type": "REQUESTED_BY_COMPANY"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "material_epoxy",
+      "type": "INVOLVES_MATERIAL"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "material_glass",
+      "type": "INVOLVES_MATERIAL"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "material_wafer",
+      "type": "INVOLVES_MATERIAL"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "technique_sem",
+      "type": "USED_TECHNIQUE"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "technique_3d_sem",
+      "type": "USED_TECHNIQUE"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "prep_cross_sectioning",
+      "type": "USED_PREPARATION_METHOD"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "prep_underside_inspection",
+      "type": "USED_PREPARATION_METHOD"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "learning_delamination_challenges",
+      "type": "HAS_LEARNING_POINT"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "learning_sem_method_adaptation",
+      "type": "HAS_LEARNING_POINT"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "learning_3d_limitations",
+      "type": "HAS_LEARNING_POINT"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "learning_iterative_collaboration",
+      "type": "HAS_LEARNING_POINT"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "challenge_delamination_artifacts",
+      "type": "ENCOUNTERED_CHALLENGE"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "challenge_3d_visualization",
+      "type": "ENCOUNTERED_CHALLENGE"
+    },
+    {
+      "source": "technique_3d_sem",
+      "target": "technique_sem",
+      "type": "SUB_CATEGORY_OF"
+    },
+    {
+      "source": "technique_sem",
+      "target": "prep_cross_sectioning",
+      "type": "REQUIRES_PREPARATION"
+    },
+    {
+      "source": "technique_sem",
+      "target": "prep_underside_inspection",
+      "type": "REQUIRES_PREPARATION"
+    },
+    {
+      "source": "technique_sem",
+      "target": "material_epoxy",
+      "type": "APPLICABLE_TO_MATERIAL"
+    },
+    {
+      "source": "technique_sem",
+      "target": "material_glass",
+      "type": "APPLICABLE_TO_MATERIAL"
+    },
+    {
+      "source": "technique_3d_sem",
+      "target": "material_epoxy",
+      "type": "APPLICABLE_TO_MATERIAL"
+    },
+    {
+      "source": "technique_hf_liftoff",
+      "target": "material_epoxy",
+      "type": "APPLICABLE_TO_MATERIAL"
+    },
+    {
+      "source": "learning_delamination_challenges",
+      "target": "material_epoxy",
+      "type": "RELATED_TO_MATERIAL"
+    },
+    {
+      "source": "learning_delamination_challenges",
+      "target": "material_glass",
+      "type": "RELATED_TO_MATERIAL"
+    },
+    {
+      "source": "learning_sem_method_adaptation",
+      "target": "technique_sem",
+      "type": "RELATED_TO_TECHNIQUE"
+    },
+    {
+      "source": "learning_3d_limitations",
+      "target": "technique_3d_sem",
+      "type": "RELATED_TO_TECHNIQUE"
+    },
+    {
+      "source": "challenge_delamination_artifacts",
+      "target": "technique_sem",
+      "type": "RELATED_TO_TECHNIQUE"
+    },
+    {
+      "source": "challenge_delamination_artifacts",
+      "target": "material_epoxy",
+      "type": "RELATED_TO_MATERIAL"
+    },
+    {
+      "source": "challenge_3d_visualization",
+      "target": "technique_3d_sem",
+      "type": "RELATED_TO_TECHNIQUE"
+    },
+    {
+      "source": "challenge_3d_visualization",
+      "target": "material_epoxy",
+      "type": "RELATED_TO_MATERIAL"
+    },
+    {
+      "source": "fa_case_wafer_delamination",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "customer_felix",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "customer_henry_leong",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "customer_ye_ko",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "customer_khai_siong",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "company_wintech",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "material_epoxy",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "material_glass",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "material_wafer",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "technique_sem",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "technique_3d_sem",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "technique_hf_liftoff",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "prep_cross_sectioning",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "prep_underside_inspection",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "learning_delamination_challenges",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "learning_sem_method_adaptation",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "learning_3d_limitations",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "learning_iterative_collaboration",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "challenge_delamination_artifacts",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    },
+    {
+      "source": "challenge_3d_visualization",
+      "target": "doc_wafer_analysis_email_thread",
+      "type": "DERIVED_FROM_DOCUMENT"
+    }
+  ]
+}
